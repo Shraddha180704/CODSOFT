@@ -8,12 +8,23 @@ def display_menu():
     print("4. Division")
     print("5. Exit\n")
     option_no = 0
+
     while option_no not in [1, 2, 3, 4, 5]:
         option_no = int(input("Please enter the option number(1/2/3/4/5): "))
+
     if option_no == 5:
         sys.exit()
-    num1 = int(input("Enter number1: "))
-    num2 = int(input("Enter number2: "))
+
+    num1 = input("Enter number1: ")
+    num2 = input("Enter number2: ")
+
+    while not (num1.isdigit() and num2.isdigit()):
+        print("Invalid input, only numbers are accepted. Please try again")
+        num1 = input("Enter number1: ")
+        num2 = input("Enter number2: ")
+
+    num1, num2 = int(num1), int(num2)
+
     if option_no == 1:
         addition(num1, num2)
     elif option_no == 2:
