@@ -1,19 +1,23 @@
+import sys
 todo_list = []
 def display_menu():
 
     print("\nMENU:")
     print("1. Create new task")
     print("2. Update existing task")
-    print("3. Track all tasks\n")
+    print("3. Track all tasks")
+    print("4. Exit\n")
     option_no = 0
-    while option_no not in [1, 2, 3]:
+    while option_no not in [1, 2, 3, 4]:
         option_no = int(input("Please enter the option number(1/2/3): "))
     if option_no == 1:
         create_new_task()
     elif option_no == 2:
         update_existing_task()
-    else:
+    elif option_no == 3:
         track_all_tasks()
+    else:
+        sys.exit()
 
 
 def create_new_task():
