@@ -9,7 +9,7 @@ def display_menu():
     print("4. Exit\n")
     option_no = 0
     while option_no not in [1, 2, 3, 4]:
-        option_no = int(input("Please enter the option number(1/2/3): "))
+        option_no = int(input("Please enter the option number(1/2/3/4): "))
     if option_no == 1:
         create_new_task()
     elif option_no == 2:
