@@ -9,10 +9,10 @@ def display_menu():
     print("5. Exit\n")
     option_no = 0
 
-    while option_no not in [1, 2, 3, 4, 5]:
-        option_no = int(input("Please enter the option number(1/2/3/4/5): "))
+    while option_no not in ["1", "2", "3", "4", "5"]:
+        option_no = input("Please enter the option number(1/2/3/4/5): ")
 
-    if option_no == 5:
+    if option_no == "5":
         sys.exit()
 
     num1 = input("Enter number1: ")
@@ -25,13 +25,13 @@ def display_menu():
 
     num1, num2 = int(num1), int(num2)
 
-    if option_no == 1:
+    if option_no == "1":
         addition(num1, num2)
-    elif option_no == 2:
+    elif option_no == "2":
         subtraction(num1, num2)
-    elif option_no == 3:
+    elif option_no == "3":
         multiplication(num1, num2)
-    elif option_no == 4:
+    elif option_no == "4":
         division(num1, num2)
 
 
