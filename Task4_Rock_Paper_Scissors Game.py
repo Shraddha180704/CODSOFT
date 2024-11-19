@@ -52,13 +52,15 @@ def user_choices():
     global user_score
     global computer_score
     i = 1
+    print("ROCK PAPER SCISSOR")
+    print("You need 5 points to win\n")
     while user_score < 5 and computer_score < 5:
         print("Round", i)
         choices = ["rock", "paper", "scissor", "exit"]
         user_choice = input("Enter your choice (rock/paper/scissor/exit): ")
         while user_choice not in choices:
             print("Invalid input")
-            user_choice = input("Enter your choice (rock/paper,scissor/exit): ").lower()
+            user_choice = input("Enter your choice (rock/paper/scissor/exit): ").lower()
         comp_choice = computer_choice()
         game_rules(user_choice, comp_choice)
         print()
