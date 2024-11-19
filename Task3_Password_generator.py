@@ -4,7 +4,7 @@ import random
 available_characters = string.ascii_letters + string.digits + string.punctuation
 
 while True:
-    password_length = input("Enter the password length: ")
+    password_length = input("Enter the password length (should be between 8 to 50): ")
     try:
         password_length = int(password_length)
     except ValueError:
